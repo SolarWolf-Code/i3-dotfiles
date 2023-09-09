@@ -1,0 +1,37 @@
+// this file just serves as a reference for my color scheme used throughout my dotfiles.
+
+Background-1	- #12121f
+Background-2	- #222236
+Background-3	- #29293f
+
+Foreground-1	- #d4d7ff
+Foreground-2	- #e4e7ff
+Foreground-3	- #f4f7ff
+
+Red-1		- #d54c73
+Red-2		- #d95177
+Red-3		- #df4e75
+
+Green-1		- #78dca7
+Green-2		- #7bdba6
+Green-3		- #84e5ac
+
+Yellow-1	- #fcf295
+Yellow-2	- #fcf39c
+Yellow-3	- #fcf4a2
+
+Blue-1		- #6d98e8
+Blue-2		- #759eea
+Blue-3		- #7ea4ec
+
+Cyan-1		- #65dedc
+Cyan-2		- #6be5e3
+Cyan-3		- #72e7e5
+
+Orange-1	- #e3b56f
+Orange-2	- #e5b976
+Orange-3	- #e5ba7a
+
+Purple-1	- #837dd7
+Purple-2	- #8783d9
+Purple-3	- #908cdb
