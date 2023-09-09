@@ -67,3 +67,14 @@ sudo systemctl start bluetooth.service
 sudo systemctl start openvpn.service
 
 sudo pacman -R kitty
+
+
+# rebooting to change everything
+read -p "Would you like to reboot for changes to take effect? (Y/N): " answer
+
+if [[ $answer =~ ^[Yy]$ ]] || [[ -z $answer ]]; then
+  echo "Rebooting..."
+  reboot
+else
+  echo "Skipping reboot..."
+fi
