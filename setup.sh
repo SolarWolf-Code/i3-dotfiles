@@ -39,6 +39,10 @@ makepkg -si
 
 yay -S --noconfirm - < ~/.config/packages.txt
 
+
+# starship
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
+
 # bluetooth
 sudo systemctl enable bluetooth.service 
 sudo systemctl start bluetooth.service
