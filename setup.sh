@@ -1,3 +1,6 @@
+# remove uneeded packages
+sudo pacman -R eog
+
 # symlinking dotfiles
 mkdir -p ~/.config
 rm -rf ~/.config/i3
@@ -5,11 +8,20 @@ rm -rf ~/.config/polybar
 cd i3-dotfiles
 shopt -s dotglob
 for file in .config/*; do
-  if [[ "$file" == ".git" || "$file" == "README.md" || "$file" == "setup.sh" || "$file" == ".gtkrc-2.0" ]]; then
-    continue
-  fi
-  ln -s "$(pwd)/$file" ~/.config/"$file"
+  ln -s "$(pwd)/$file" ~/"$file"
 done
+
+for file in .icons/*; do
+  ln -s "$(pwd)/$file" ~/"$file"
+done
+
+for file in .local/share*; do
+  ln -s "$(pwd)/$file" ~/"$file"
+done
+
+# stop exisitng polybar and start again
+killall polybar
+polybar primary-top
 
 # adding ble.sh (autocomplete in bash)
 cd 
@@ -40,6 +52,10 @@ makepkg -si
 yay -S --noconfirm - < ~/.config/packages.txt
 
 
+# add multilib and sync
+sudo cp -f ~/.config/pacman.conf /etc/pacman.conf
+sudo pacman -Syy
+
 # starship
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
@@ -49,3 +65,5 @@ sudo systemctl start bluetooth.service
 
 # start openvpn service
 sudo systemctl start openvpn.service
+
+sudo pacman -R kitty
