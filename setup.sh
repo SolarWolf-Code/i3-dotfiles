@@ -1,5 +1,5 @@
 # remove uneeded packages
-sudo pacman -R eog
+sudo pacman -R eog --noconfirm 
 
 # symlinking dotfiles
 mkdir -p ~/.config
@@ -13,7 +13,7 @@ cp -r .local/share ~/.local/share
 
 # adding ble.sh (autocomplete in bash)
 cd 
-sudo pacman -S base-devel
+sudo pacman -S base-devel --noconfirm 
 git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
 make -C ble.sh install PREFIX=~/.local
 echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
@@ -42,7 +42,7 @@ yay -S --noconfirm - < ~/.config/packages.txt
 
 # add multilib and sync
 sudo cp -f ~/.config/pacman.conf /etc/pacman.conf
-sudo pacman -Syy
+sudo pacman -Syy --noconfirm 
 
 # starship
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
@@ -54,7 +54,7 @@ sudo systemctl start bluetooth.service
 # start openvpn service
 sudo systemctl start openvpn.service
 
-sudo pacman -R kitty
+sudo pacman -R kitty --noconfirm 
 
 xdg-settings set default-web-browser librewolf.desktop
 
