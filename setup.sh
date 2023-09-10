@@ -33,7 +33,6 @@ sudo systemctl enable openvpn.service
 
 # install yay
 cd
-sudo pacman -S base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
