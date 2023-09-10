@@ -38,7 +38,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # start browser
-bindsym $mod+shift+Return exec firefox
+bindsym $mod+shift+Return exec librewolf
 
 # start file manager
 bindsym $mod+shift+n exec nemo
