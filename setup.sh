@@ -9,7 +9,7 @@ cd i3-dotfiles
 
 cp -r .config ~/
 cp -r .icons ~/
-cp -r .local/share ~/.local/share
+cp -r .local ~/
 
 # adding ble.sh (autocomplete in bash)
 cd 
@@ -31,6 +31,11 @@ sed -i "s/^ExecStart=.*/ExecStart=$(echo $ovpn_string | sed 's/\//\\\//g')/" ~/.
 sudo cp  ~/.config/openvpn.service /etc/systemd/system/openvpn.service
 sudo systemctl enable openvpn.service
 
+
+# add multilib and sync
+sudo cp -f ~/.config/pacman.conf /etc/pacman.conf
+sudo pacman -Syy --noconfirm 
+
 # install yay
 cd
 git clone https://aur.archlinux.org/yay.git
@@ -38,11 +43,6 @@ cd yay
 makepkg -si
 
 yay -S --noconfirm - < ~/.config/packages.txt
-
-
-# add multilib and sync
-sudo cp -f ~/.config/pacman.conf /etc/pacman.conf
-sudo pacman -Syy --noconfirm 
 
 # starship
 echo 'eval "$(starship init bash)"' >> ~/.bashrc
