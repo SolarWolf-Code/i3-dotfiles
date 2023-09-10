@@ -57,6 +57,8 @@ sudo systemctl start openvpn.service
 
 sudo pacman -R kitty
 
+xdg-settings set default-web-browser librewolf.desktop
+
 
 # rebooting to change everything
 read -p "Would you like to reboot for changes to take effect? (Y/N): " answer
