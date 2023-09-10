@@ -10,7 +10,7 @@ font pango:ShureTechMono Nerd Font 9
 
 # autostart
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id xrandr -s 1920x1080
+# exec --no-startup-id xrandr -s 1920x1080
 #exec --no-startup-id xrandr --output HDMI-1 --auto --right-of Virtual-1
 exec --no-startup-id "/home/$USER/.config/polybar/scripts/polybarstart.sh"
 # exec --no-startup-id picom
