@@ -24,3 +24,4 @@ boomer-git
 spotify-launcher
 github-cli
 filezilla
+nitrogen
