@@ -3,7 +3,6 @@ dunst
 librewolf-bin
 flameshot
 rustdesk-bin
-picom-ibhagwan-git
 obs-studio
 openvpn
 starship

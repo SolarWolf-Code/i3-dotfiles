@@ -23,7 +23,8 @@ cd
 mv ~/.config/.bashrc ~/.bashrc
 
 # moving openvpn file to correct folder and start the service
-cd
+mkdir -p ~/ovpn && touch ~/ovpn/credentials.txt
+
 sed -i '/^auth-user-pass/c\auth-user-pass '"$HOME"'/ovpn/credentials.txt' ~/.config/us-slc.prod.surfshark.com_udp.ovpn
 
 ovpn_string="/usr/bin/openvpn $HOME/.config/us-slc.prod.surfshark.com_udp.ovpn"
@@ -54,10 +55,18 @@ sudo systemctl start bluetooth.service
 # start openvpn service
 sudo systemctl start openvpn.service
 
+# remove uneeded terminal
 sudo pacman -R kitty --noconfirm 
 
+# set default browser
 xdg-settings set default-web-browser librewolf.desktop
 
+# set wallpaper
+nitrogen --set-scaled ~/.config/bao.jpg
+
+# create dir for flameshot
+mkdir -p ~/Images/screenshots
+mkdir -p ~/Pictures
 
 # rebooting to change everything
 read -p "Would you like to reboot for changes to take effect? (Y/N): " answer
