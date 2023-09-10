@@ -6,22 +6,10 @@ mkdir -p ~/.config
 rm -rf ~/.config/i3
 rm -rf ~/.config/polybar
 cd i3-dotfiles
-shopt -s dotglob
-for file in .config/*; do
-  ln -s "$(pwd)/$file" ~/"$file"
-done
 
-for file in .icons/*; do
-  ln -s "$(pwd)/$file" ~/"$file"
-done
-
-for file in .local/share*; do
-  ln -s "$(pwd)/$file" ~/"$file"
-done
-
-# stop exisitng polybar and start again
-killall polybar
-polybar primary-top
+cp -r .config ~/
+cp -r .icons ~/
+cp -r .local/share ~/.local
 
 # adding ble.sh (autocomplete in bash)
 cd 
