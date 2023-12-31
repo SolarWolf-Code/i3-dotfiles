@@ -57,9 +57,6 @@ sudo systemctl start openvpn.service
 # set default browser
 xdg-settings set default-web-browser librewolf.desktop
 
-# set wallpaper
-nitrogen --set-scaled ~/.config/bao.jpg
-
 # create dir for flameshot
 mkdir -p ~/Images/screenshots
 mkdir -p ~/Pictures
