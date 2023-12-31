@@ -1,4 +1,5 @@
 qview
+rofi
 dunst
 librewolf-bin
 flameshot
@@ -31,3 +32,8 @@ neovim
 python-pynvim
 python-pipx
 cargo
+lxappearance
+gnome-themes-extra
+adwaita-qt5-git
+adwaita-qt6-git
+neofetch

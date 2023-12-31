@@ -4,7 +4,6 @@ sudo pacman -R eog --noconfirm
 # symlinking dotfiles
 mkdir -p ~/.config
 rm -rf ~/.config/i3
-rm -rf ~/.config/polybar
 cd i3-dotfiles
 
 cp -r .config ~/
@@ -54,9 +53,6 @@ sudo systemctl start bluetooth.service
 
 # start openvpn service
 sudo systemctl start openvpn.service
-
-# remove uneeded terminal
-sudo pacman -R kitty --noconfirm 
 
 # set default browser
 xdg-settings set default-web-browser librewolf.desktop

@@ -10,8 +10,6 @@ font pango:ShureTechMono Nerd Font 9
 
 # autostart
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id "/home/$USER/.config/polybar/scripts/polybarstart.sh"
-exec --no-startup-id picom -i 1.0 --active-opacity 1.0
 exec --no-startup-id dunst -config "/home/$USER/.config/dunst/dunstrc"
 
 # Start XDG autostart .desktop files using dex. See also
