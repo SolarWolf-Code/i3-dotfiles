@@ -24,3 +24,10 @@ spotify-launcher
 github-cli
 filezilla
 nitrogen
+bluez
+bluez-utils
+blueberry
+neovim
+python-pynvim
+python-pipx
+cargo
