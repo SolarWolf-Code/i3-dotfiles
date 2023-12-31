@@ -32,8 +32,26 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# numlock on
+exec --no-startup-id numlockx on
+
 # start a terminal
 bindsym $mod+Return exec alacritty
+
+# set binding for play button and execute play-pause
+bindsym XF86AudioPlay exec playerctl -p playerctld play-pause
+bindsym XF86AudioNext exec playerctl -p playerctld next
+bindsym XF86AudioPrev exec playerctl -p playerctld previous
+
+# Boomer Zoom
+bindsym Ctrl + grave exec --no-startup-id pgrep boomer || boomer
+
+# Steam -> allows for games to update in background
+exec steam -silent
+
+# Ruskdesk
+assign [class="Rustdesk"] $ws3
+exec --no-startup-id rustdesk
 
 # start browser
 bindsym $mod+shift+Return exec librewolf
@@ -45,8 +63,8 @@ bindsym $mod+shift+n exec nemo
 bindsym $mod+Shift+q kill
 
 # start rofi
-bindsym $mod+d exec "rofi -modi drun -show drun"
-bindsym $mod+Shift+d exec "rofi -modi run -show run"
+bindsym $mod+Tab exec "rofi -modi drun -show drun"
+bindsym $mod+Shift+Tab exec "rofi -modi run -show run"
 
 # change focus
 bindsym $mod+h focus left
@@ -179,3 +197,4 @@ client.urgent           #d95177 #d54c73 #D4D7FF #EF4A73   #d54c73
 client.placeholder      #12121F #12121F #D4D7FF #12121F   #222236
 
 client.background       #12121F
+
