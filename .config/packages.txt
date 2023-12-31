@@ -38,3 +38,4 @@ adwaita-qt5-git
 adwaita-qt6-git
 neofetch
 gnome-disk-utility
+gum
