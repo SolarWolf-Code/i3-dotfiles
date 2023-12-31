@@ -1,0 +1,91 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#29293f"
+blue = "#6d98e8"
+cyan = "#65dedc"
+green = "#7bdba6"
+magenta = "#837dd7"
+red = "#d54c73"
+white = "#f4f7ff"
+yellow = "#fcf295"
+
+[colors.dim]
+black = "#12121f"
+blue = "#7ea4ec"
+cyan = "#72e7e5"
+green = "#84e5ac"
+magenta = "#908cdb"
+red = "#df4e75"
+white = "#d4d7ff"
+yellow = "#fcf4a2"
+
+[colors.normal]
+black = "#222236"
+blue = "#759eea"
+cyan = "#6be5e3"
+green = "#78dca7"
+magenta = "#8783d9"
+red = "#d95177"
+white = "#e4e7ff"
+yellow = "#fcf39c"
+
+[colors.primary]
+background = "#12121f"
+foreground = "#d4d7ff"
+
+[cursor]
+style = "Underline"
+
+[font]
+size = 16
+
+[font.bold]
+family = "ShureTechMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "ShureTechMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "ShureTechMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "ShureTechMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[scrolling]
+history = 500
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+
+[window]
+dynamic_padding = false
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 0
+y = 0
