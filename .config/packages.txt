@@ -39,3 +39,4 @@ adwaita-qt6-git
 neofetch
 gnome-disk-utility
 gum
+nemo

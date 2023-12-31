@@ -30,6 +30,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# nemo
+bindsym $mod+shift+n exec nemo
+
 # numlock on
 exec --no-startup-id numlockx on
 
