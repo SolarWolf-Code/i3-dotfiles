@@ -40,4 +40,5 @@ neofetch
 gnome-disk-utility
 gum
 nemo
+vlc
 qbittorrent
